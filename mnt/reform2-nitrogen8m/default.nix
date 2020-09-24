@@ -9,7 +9,7 @@
     extraModprobeConfig = "options imx-dcss dcss_use_hdmi=0";
     kernelPackages = lib.mkDefault pkgs.linuxPackages_reformNitrogen8m_latest;
     kernelParams =
-      [ "console=ttymxc0,115200" "console=tty1" "cma=512M" "pci=nomsi" ];
+      [ "console=ttymxc0,115200" "console=tty1" "pci=nomsi" ];
     loader = {
       generic-extlinux-compatible.enable = lib.mkDefault true;
       grub.enable = lib.mkDefault false;
